@@ -4,7 +4,9 @@
 
 ### **ANOTAÇÕES DE AULA E AFINS:**
 
-#### **AULA DIA 10 - ESTRUTURA DE DADOS** 📅
+### PILHAS:
+
+#### **AULA DIA 10 - ESTRUTURA DE DADOS ** 📅
 
 - **Contrato** 📝  
   - **C** = **CREATE** (criar) ➕  
