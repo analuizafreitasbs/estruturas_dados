@@ -6,7 +6,7 @@
 
 ### PILHAS:
 
-#### **AULA DIA 10 - ESTRUTURA DE DADOS ** 📅
+#### **AULA DIA 10 - ESTRUTURA DE DADOS** 📅
 
 - **Contrato** 📝  
   - **C** = **CREATE** (criar) ➕  
