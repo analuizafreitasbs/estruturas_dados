@@ -1,0 +1,94 @@
+package Filas;
+// é literalmente uma fila normal com espaços delimitados, como se fosse uma fila de banco
+public class FilaEstatica implements Enfileiravel {
+    
+// variaveis de instancia 
+     private Object[] dados;
+     private int ponteiroInicio;
+     private int ponteiroFim;
+
+     // constrtures
+public FilaEstatica(int tamanho) {
+    dados = new Object[tamanho];
+    ponteiroInicio = 0 ;
+    ponteiroFim = -1;
+}
+
+@Override
+public void enfileirar(Object dado) {
+    if (!estaCheia()) {
+        ponteiroFim++;
+        dados[ponteiroFim] = dado;
+    } else {
+        System.err.println("fila cheia");
+    }
+
+
+}
+
+@Override
+public void desenfileirar() {
+    Object aux = null;
+    if (!estaVazia()) {
+        aux = dados[ponteiroInicio];
+        ponteiroInicio++;
+    } else {
+        System.err.println("fila vazia");
+    }
+
+
+}
+@Override
+public Object frente() {
+    Object aux = null;
+    if (!estaVazia()) {
+        aux = dados[ponteiroInicio];
+    } else {
+        System.err.println("fila vazia");
+    }
+    return aux;
+}
+
+@Override
+public void atualizarInicio(Object dado) {
+    if (!estaVazia()) {
+            dados[ponteiroInicio] = dado;
+        } else {
+            System.err.println("Queue is empty");
+        }
+
+}
+
+@Override
+public void atualizarFim(Object dado) {
+    if (!estaVazia()) {
+            dados[ponteiroFim] = dado;
+        } else {
+            System.err.println("Queue is empty");
+        }
+
+}
+
+
+@Override
+public boolean estaCheia() {
+    return (ponteiroFim == dados.length -1);
+
+}
+@Override
+public boolean estaVazia() {
+    return (ponteiroFim == ponteiroInicio + 1);
+
+
+}
+
+public String imprimir() {
+     String retorno = "[";
+        for (int i = ponteiroInicio; i <= ponteiroFim; i++) {
+           if (i == ponteiroFim)
+            retorno += dados[i];
+            else retorno += dados[i] + ",";
+        }
+        return retorno + "]"; 
+}
+}
