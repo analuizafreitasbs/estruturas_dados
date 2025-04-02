@@ -51,10 +51,10 @@
 ##### A maioria dos conceitos gerais são os mesmo de pilha!
 
 - **Operações Principais** 🔧:  
-- **Enfileirar** = `enqueue` ⬆️  
-- **Frente da fila** = `front` 🔝  
-- **Atualizar** = `update` 🔄  
-- **Desenfileirar** = `dequeue` ⬇️  
+- **Enfileirar** = **enqueue** ⬆️  
+- **Frente da fila** = **front** 🔝  
+- **Atualizar** = **update** 🔄  
+- **Desenfileirar** = **dequeue** ⬇️  
 
 - **Operações Auxiliares** 🛠️:
   - **Está cheia** = **isFull** (overflow) ❌  
@@ -78,5 +78,8 @@
 - Mais flexível que uma fila simples.  
 - Exemplo: Histórico de navegação, onde podemos avançar e voltar.  
 
+### LISTAS:
+
+#### **AULA DIA 28 - ESTRUTURA DE DADOS** 📅
 
 
