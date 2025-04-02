@@ -48,7 +48,7 @@
 
 #### **AULA DIA 21 - ESTRUTURA DE DADOS** 📅
 
-- A maioria dos conceitos gerais são os mesmo de pilha!
+##### A maioria dos conceitos gerais são os mesmo de pilha!
 
 - **Operações Principais** 🔧:  
 - **Enfileirar** = `enqueue` ⬆️  
