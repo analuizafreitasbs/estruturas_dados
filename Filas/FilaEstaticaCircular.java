@@ -14,11 +14,17 @@ public FilaEstaticaCircular(int tamanho) {
 
 }
 
+public FilaEstaticaCircular() {
+    this(10);
+}
+
 @Override
 public void enfileirar(Object dado) {
     if (!estaCheia()) {
-        ponteiroFim = (ponteiroFim+1)%dados.length;
+        ponteiroFim = avancar(ponteiroFim);
         dados[ponteiroFim] = dado;
+        if (estaVazia())
+            ponteiroInicio = ponteiroFim;
         quantidade++;
     } else {
         System.out.println("fila cheia");
@@ -27,27 +33,28 @@ public void enfileirar(Object dado) {
 }
 
 @Override
-public void desenfileirar() {
-    Object aux = null;
+public Object desenfileirar() {
+    Object dadoInicio = null;
     if (!estaVazia()) {
-        aux = dados[ponteiroInicio];
-        ponteiroInicio = (ponteiroInicio + 1)%dados.length;
+        dadoInicio = dados[ponteiroInicio];
+        ponteiroInicio = avancar(ponteiroInicio);
         quantidade--;
     } else {
-        System.err.println("fila cheia");
+        System.err.println("Fila cheia");
     }
+    return dadoInicio;
 
 }
 
 @Override
 public Object frente() {
-    Object aux = null;
+    Object dadoInicio = null;
     if (!estaVazia()) {
-        aux = dados[ponteiroInicio];
+        dadoInicio = dados[ponteiroInicio];
     } else {
         System.err.println("Queue is empty");
     }
-    return aux;
+    return dadoInicio;
 }
 
 @Override
@@ -84,10 +91,13 @@ public boolean estaVazia() {
 @Override
 public String imprimir() {
      String retorno = "[";
-        for (int i = ponteiroInicio; i < quantidade+ponteiroInicio; i++) {
-           if (i == quantidade + ponteiroInicio - 1)
-            retorno += dados[i%dados.length];
-            else retorno += dados[i%dados.length] + ",";
+     int ponteiroAux = ponteiroInicio; // aqui ponteiro aux
+        for (int i = 0; i < quantidade; i++) {
+           if (i == quantidade - 1)
+            retorno += dados[ponteiroAux];
+            else retorno += dados[ponteiroAux] + ",";
+
+            ponteiroAux = avancar(ponteiroAux);
         }
         return retorno + "]";
 }

@@ -14,6 +14,11 @@ public FilaEstatica(int tamanho) {
     ponteiroFim = -1;
 }
 
+public FilaEstatica() {
+    this(10);
+}
+
+// aqui são os metodos principais
 @Override
 public void enfileirar(Object dado) {
     if (!estaCheia()) {
@@ -27,26 +32,26 @@ public void enfileirar(Object dado) {
 }
 
 @Override
-public void desenfileirar() {
-    Object aux = null;
+public Object desenfileirar() {
+    Object dadoInicio = null;
     if (!estaVazia()) {
-        aux = dados[ponteiroInicio];
+        dadoInicio = dados[ponteiroInicio];
         ponteiroInicio++;
     } else {
         System.err.println("fila vazia");
     }
-
+    return dadoInicio;
 
 }
 @Override
 public Object frente() {
-    Object aux = null;
+    Object dadoInicio = null;
     if (!estaVazia()) {
-        aux = dados[ponteiroInicio];
+        dadoInicio = dados[ponteiroInicio];
     } else {
         System.err.println("fila vazia");
     }
-    return aux;
+    return dadoInicio;
 }
 
 @Override
@@ -69,7 +74,7 @@ public void atualizarFim(Object dado) {
 
 }
 
-
+// metodos auxiliares
 @Override
 public boolean estaCheia() {
     return (ponteiroFim == dados.length -1);
@@ -82,7 +87,8 @@ public boolean estaVazia() {
 
 }
 
-public String imprimir() {
+     @Override
+     public String imprimir() {
      String retorno = "[";
         for (int i = ponteiroInicio; i <= ponteiroFim; i++) {
            if (i == ponteiroFim)
