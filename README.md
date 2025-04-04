@@ -2,88 +2,94 @@
 
 - **ALUNA:** **ANA LUIZA FREITAS B SIQUEIRA** 👩‍🎓
 
-### **ANOTAÇÕES DE AULA E AFINS:**
+## **ANOTAÇÕES DE AULA E AFINS:**
 
-### PILHAS:
+---
 
-#### **AULA DIA 10 e 17 - ESTRUTURA DE DADOS** 📅
+## **PILHAS**
 
-- **Contrato** 📝  
-  - **C** = **CREATE** (criar) ➕  
-  - **R** = **READ** (ler) 📖  
-  - **U** = **UPDATE** (atualizar) 🔄  
-  - **D** = **DELETE** (apagar) 🗑️  
-  - **S** = **SORT** (ordenar) 🔢
+### **AULA DIA 10 e 17 - ESTRUTURA DE DADOS** 📅
 
-- **Tipos de Dados Numéricos** 🔢:
-  - **INTEIROS**:  
-    - unsigned int; // tinyint, smallint, int, long, LONGINT, BIGINT (SQL) 🔢
+### **Contrato** 📝  
+- **C** = **CREATE** (criar) ➕  
+- **R** = **READ** (ler) 📖  
+- **U** = **UPDATE** (atualizar) 🔄  
+- **D** = **DELETE** (apagar) 🗑️  
+- **S** = **SORT** (ordenar) 🔢
 
-  - **PONTOS FLUTUANTES**:  
-    - **FLOAT**, **DOUBLE**  
-    - Ponto fixo: **NUMERIC** ou **DECIMAL** (SQL) 💡
+### **Tipos de Dados Numéricos** 🔢  
+- **INTEIROS**:  
+  - unsigned int; // tinyint, smallint, int, long, LONGINT, BIGINT (SQL) 🔢  
+- **PONTOS FLUTUANTES**:  
+  - **FLOAT**, **DOUBLE**  
+  - Ponto fixo: **NUMERIC** ou **DECIMAL** (SQL) 💡  
 
-- **String** 💬  
-  - **string** = "ifba"  
-  - **char** = 'A'  
-  - **Lógico** = **boolean**, **bool**  
-  - Pessoa: **pessoa["ana"]**
+### **String** 💬  
+- **string** = `"ifba"`  
+- **char** = `'A'`  
+- **Lógico** = **boolean**, **bool**  
+- Pessoa: **pessoa["ana"]**  
 
-- **Vetores e Arrays** 🧮:
-  - Vetor, array, matriz unidimensional  
-  - Arrays ordinais  
-  - Arrays associativos
+### **Vetores e Arrays** 🧮  
+- Vetor, array, matriz unidimensional  
+- Arrays ordinais  
+- Arrays associativos  
 
-- **Operações Principais** 🔧:
-  - **Empilhar** = **push** ⬆️  
-  - **Desempilhar** = **pop** ⬇️  
-  - **Topo** = **topo** 🔝
+### **Operações Principais** 🔧  
+- **Empilhar** = `push()` ⬆️  
+- **Desempilhar** = `pop()` ⬇️  
+- **Topo** = `topo()` 🔝  
 
-- **Operações Auxiliares** 🛠️:
-  - **Está cheia** = **isFull** (overflow) ❌  
-  - **Está vazia** = **isEmpty** (underflow) ⚠️  
-  - **Imprimir** = **print** 🖨️
+### **Operações Auxiliares** 🛠️  
+- **Está cheia** = `isFull()` (overflow) ❌  
+- **Está vazia** = `isEmpty()` (underflow) ⚠️  
+- **Imprimir** = `print()` 🖨️  
 
-  ### FILAS:
+---
 
-#### **AULA DIA 24 - ESTRUTURA DE DADOS** 📅
+## **FILAS**
 
-##### A maioria dos conceitos gerais são os mesmo de pilha!
+### **AULA DIA 24 - ESTRUTURA DE DADOS** 📅
 
-- **Operações Principais** 🔧:  
-- **Enfileirar** = **enqueue** ⬆️  
-- **Frente da fila** = **front** 🔝  
-- **Atualizar** = **update** 🔄  
-- **Desenfileirar** = **dequeue** ⬇️  
+_A maioria dos conceitos gerais são os mesmos de pilha!_
 
-- **Operações Auxiliares** 🛠️:
-  - **Está cheia** = **isFull** (overflow) ❌  
-  - **Está vazia** = **isEmpty** (underflow) ⚠️  
-  - **Imprimir** = **print** 🖨️
+### **Operações Principais** 🔧  
+- **Enfileirar** = `enqueue()` ⬆️  
+- **Frente da fila** = `front()` 🔝  
+- **Atualizar** = `update()` 🔄  
+- **Desenfileirar** = `dequeue()` ⬇️  
 
-### **Tipos de Filas** 🏗️  
+### **Operações Auxiliares** 🛠️  
+- **Está cheia** = `isFull()` (overflow) ❌  
+- **Está vazia** = `isEmpty()` (underflow) ⚠️  
+- **Imprimir** = `print()` 🖨️  
 
-**Fila Simples** (Queue) 🏃‍♂️➡️  
+---
+
+## **TIPOS DE FILAS** 🏗️  
+
+### **Fila Simples (Queue) 🏃‍♂️➡️**  
 - Estrutura FIFO (*First In, First Out*).  
 - Elementos entram no **final** e saem pelo **início**.  
 - Exemplo: Filas de atendimento, processamento de tarefas.  
 
-**Fila Circular** 🔄  
+### **Fila Circular** 🔄  
 - O **último elemento aponta para o primeiro**, formando um ciclo.  
 - Evita desperdício de espaço quando elementos são removidos.  
 - Muito usada em buffers de dados, sistemas de tempo real.  
 
-**Fila com Dupla Terminação (Deque - Double-ended Queue)** ↔️  
+### **Fila com Dupla Terminação (Deque - Double-ended Queue) ↔️**  
 - Permite inserção e remoção **tanto no início quanto no fim**.  
 - Mais flexível que uma fila simples.  
 - Exemplo: Histórico de navegação, onde podemos avançar e voltar.  
 
-### LISTAS:
+---
 
-#### **AULA DIA 31 - ESTRUTURA DE DADOS** 📅
+## **LISTAS**
 
-##### **O que é uma Lista Estática Circular?**  
+### **AULA DIA 31 - ESTRUTURA DE DADOS** 📅  
 
+### **O que é uma Lista Estática Circular?**  
 Uma **estrutura de dados estática** onde o **último elemento aponta para o primeiro**, formando um **ciclo contínuo**.  
 
 - Utiliza **um vetor fixo** para armazenar os elementos.  
@@ -147,6 +153,3 @@ Uma **estrutura de dados estática** onde o **último elemento aponta para o pri
 ### **Outras operações:**  
 - `limpar()` 🗑️ → Remove **todos os elementos**.  
 - `tamanho()` 📏 → Retorna o **número total de elementos**.  
-
-
-
