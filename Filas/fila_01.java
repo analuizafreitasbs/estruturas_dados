@@ -42,4 +42,6 @@ public class fila_01 {
         return total==dados.length;
     }
     
+    
+
 }

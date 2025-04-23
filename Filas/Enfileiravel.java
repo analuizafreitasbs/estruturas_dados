@@ -20,6 +20,7 @@ public interface Enfileiravel {
     
     // estaCheia
     // estaVazia
+
     // imprimir
     
 }
