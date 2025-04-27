@@ -1,0 +1,85 @@
+public void inserir(int posicao, Object dado) {
+    // Verifica se a lista não está cheia antes de tentar inserir um novo dado
+    if (!estaCheia()) {
+        
+        // Verifica se a posição fornecida está dentro do intervalo válido (0 até quantidade)
+        if (posicao >= 0 && posicao <= quantidade) {
+            
+            // Converte a posição lógica (posição fornecida pelo usuário) para a posição física no array
+            int posicaoFisica = mapeamento(posicao);
+            
+            // Define as variáveis x e y para as posições atuais que precisam ser deslocadas
+            int x = ponteiroFim;  // A posição onde o último dado está armazenado
+            int y = avancar(x);    // A próxima posição depois do ponteiroFim
+
+            // Move todos os dados da última posição para a posição seguinte, criando espaço para o novo elemento
+            for (int i = 0; i < quantidade - posicao; i++) {
+                // Move o dado de y para a posição de x
+                dados[x] = dados[y];
+                
+                // Atualiza x e y para as posições anteriores (pois é uma lista circular)
+                x = retroceder(x);
+                y = retroceder(y);
+            }
+
+            // Insere o novo dado na posição lógica convertida (posicaoFisica)
+            dados[posicaoFisica] = dado;
+            
+            // Incrementa a quantidade de elementos na lista
+            quantidade++;
+            
+            // Atualiza o ponteiroFim para apontar para a próxima posição disponível
+            ponteiroFim = avancar(ponteiroFim);
+        } else {
+            // Se a posição fornecida for inválida, imprime um erro
+            System.err.println("Índice inválido!");
+        }
+    } else {
+        // Se a lista estiver cheia, imprime um erro
+        System.err.println("Lista cheia!");
+    }
+}
+
+public Object apagar(int posicao) {
+    // Inicializa a variável removido, que armazenará o elemento a ser removido
+    Object removido = null;
+
+    // Verifica se a lista não está vazia
+    if (!estaVazia()) {
+        
+        // Verifica se a posição fornecida é válida (dentro do intervalo de elementos na lista)
+        if (posicao >= 0 && posicao < quantidade) {
+
+            // Calcula a posição física no array (porque a lista é circular)
+            int posicaoFisica = mapeamento(posicao);
+            
+            // Armazena o elemento a ser removido
+            removido = dados[posicaoFisica];
+
+            // Laço para mover os dados a partir da posição removida para "fechar o espaço"
+            for (int i = posicaoFisica; i != ponteiroFim; i = avancar(i)) {
+                // Obtém a posição do próximo elemento no array
+                int proxPos = avancar(i);
+                
+                // Move o dado da posição próxima para a posição atual
+                dados[i] = dados[proxPos];
+            }
+
+            // Decrementa a quantidade de elementos na lista após a remoção
+            quantidade--;
+            
+            // Atualiza o ponteiro de fim da lista, retrocedendo uma posição
+            ponteiroFim = retroceder(ponteiroFim);
+
+        } else {
+            // Se a posição não for válida, imprime um erro indicando o índice inválido
+            System.err.println("Índice inválido!");
+        }
+    } else {
+        // Se a lista estiver vazia, imprime um erro indicando que não é possível apagar
+        System.err.println("Lista vazia!");
+    }
+    
+    // Retorna o elemento removido
+    return removido;
+}
