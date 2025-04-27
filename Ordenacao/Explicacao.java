@@ -1,5 +1,5 @@
 package Ordenacao;
-// algoritmos de ordanação por troca
+// algoritmos de ordenação por troca
 // listas ordenas 
 // bsuca de dados
 
