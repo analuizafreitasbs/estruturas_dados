@@ -1,6 +1,4 @@
-package Treino_provas_antigas;
-
-import java.util.List;
+package Treino_provas_antigas.Treino.Treino;
 
 public interface ControleDeReservaHotel {
     void adicionarReserva(String nome, String dataEntrada, String dataSaida, String servicosAdicionais);

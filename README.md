@@ -1,155 +1,225 @@
-# **ESTRUTURA DE DADOS 2025.1** 📚
+# 📚 Estrutura de Dados 2025.1
 
-- **ALUNA:** **ANA LUIZA FREITAS B SIQUEIRA** 👩‍🎓
-
-## **ANOTAÇÕES DE AULA E AFINS:**
-
----
-
-## **PILHAS**
-
-### **AULA DIA 10 e 17 - ESTRUTURA DE DADOS** 📅
-
-### **Contrato** 📝  
-- **C** = **CREATE** (criar) ➕  
-- **R** = **READ** (ler) 📖  
-- **U** = **UPDATE** (atualizar) 🔄  
-- **D** = **DELETE** (apagar) 🗑️  
-- **S** = **SORT** (ordenar) 🔢
-
-### **Tipos de Dados Numéricos** 🔢  
-- **INTEIROS**:  
-  - unsigned int; // tinyint, smallint, int, long, LONGINT, BIGINT (SQL) 🔢  
-- **PONTOS FLUTUANTES**:  
-  - **FLOAT**, **DOUBLE**  
-  - Ponto fixo: **NUMERIC** ou **DECIMAL** (SQL) 💡  
-
-### **String** 💬  
-- **string** = `"ifba"`  
-- **char** = `'A'`  
-- **Lógico** = **boolean**, **bool**  
-- Pessoa: **pessoa["ana"]**  
-
-### **Vetores e Arrays** 🧮  
-- Vetor, array, matriz unidimensional  
-- Arrays ordinais  
-- Arrays associativos  
-
-### **Operações Principais** 🔧  
-- **Empilhar** = `push()` ⬆️  
-- **Desempilhar** = `pop()` ⬇️  
-- **Topo** = `topo()` 🔝  
-
-### **Operações Auxiliares** 🛠️  
-- **Está cheia** = `isFull()` (overflow) ❌  
-- **Está vazia** = `isEmpty()` (underflow) ⚠️  
-- **Imprimir** = `print()` 🖨️  
+**Aluna:** Ana Luiza Freitas B Siqueira 👩‍🎓
+**Anotações de Aula e Afins**
 
 ---
 
-## **FILAS**
+## 1. Pilhas
 
-### **AULA DIA 24 - ESTRUTURA DE DADOS** 📅
+**Aulas: 10 e 17 📅**
 
-_A maioria dos conceitos gerais são os mesmos de pilha!_
+### 🔠 Contrato CRUD + S
 
-### **Operações Principais** 🔧  
-- **Enfileirar** = `enqueue()` ⬆️  
-- **Frente da fila** = `front()` 🔝  
-- **Atualizar** = `update()` 🔄  
-- **Desenfileirar** = `dequeue()` ⬇️  
+* **C = Create (criar)** ➕
+* **R = Read (ler)** 📖
+* **U = Update (atualizar)** 🔄
+* **D = Delete (apagar)** 🗑️
+* **S = Sort (ordenar)** 🔢
 
-### **Operações Auxiliares** 🛠️  
-- **Está cheia** = `isFull()` (overflow) ❌  
-- **Está vazia** = `isEmpty()` (underflow) ⚠️  
-- **Imprimir** = `print()` 🖨️  
+### 🔢 Tipos de Dados Numéricos
 
----
+#### Inteiros:
 
-## **TIPOS DE FILAS** 🏗️  
+* `unsigned int`, `tinyint`, `smallint`, `int`, `long`, `LONGINT`, `BIGINT` (SQL)
 
-### **Fila Simples (Queue) 🏃‍♂️➡️**  
-- Estrutura FIFO (*First In, First Out*).  
-- Elementos entram no **final** e saem pelo **início**.  
-- Exemplo: Filas de atendimento, processamento de tarefas.  
+#### Pontos Flutuantes:
 
-### **Fila Circular** 🔄  
-- O **último elemento aponta para o primeiro**, formando um ciclo.  
-- Evita desperdício de espaço quando elementos são removidos.  
-- Muito usada em buffers de dados, sistemas de tempo real.  
+* `FLOAT`, `DOUBLE`
 
-### **Fila com Dupla Terminação (Deque - Double-ended Queue) ↔️**  
-- Permite inserção e remoção **tanto no início quanto no fim**.  
-- Mais flexível que uma fila simples.  
-- Exemplo: Histórico de navegação, onde podemos avançar e voltar.  
+#### Ponto fixo:
 
----
+* `NUMERIC`, `DECIMAL` (SQL) 💡
 
-## **LISTAS**
+#### Outros:
 
-### **AULA DIA 31 - ESTRUTURA DE DADOS** 📅  
+* **String:** `string = "ifba"`, `char = 'A'` 💬
+* **Lógico:** `boolean`, `bool`
+* **Pessoa:** `pessoa["ana"]`
 
-### **O que é uma Lista Estática Circular?**  
-Uma **estrutura de dados estática** onde o **último elemento aponta para o primeiro**, formando um **ciclo contínuo**.  
+### 🧮 Vetores e Arrays
 
-- Utiliza **um vetor fixo** para armazenar os elementos.  
-- O **índice do próximo elemento** é calculado usando aritmética modular.  
-- Evita o uso de **ponteiros nulos**, permitindo percorrer a lista **infinitamente**.  
-- Muito usada em **buffers circulares**, **sistemas de filas**, e **gestão de memória**.  
+* Vetor, array, matriz unidimensional
+* Arrays ordinais
+* Arrays associativos
 
----
+### 🔧 Operações Principais
 
-## **Operações Principais** 🔧  
+* **Empilhar:** `push()` ⬆️
+* **Desempilhar:** `pop()` ⬇️
+* **Topo:** `topo()` 🔝
 
-### **Adicionar elementos:**  
-- **Anexar** = `anexar(dado)` ➕ → Adiciona um elemento **no final** da lista.  
-- **Inserir** = `inserir(posição, dado)` 📌 → Insere um elemento em uma **posição específica**.  
+### 🛠️ Operações Auxiliares
 
-### **Consultar elementos:**  
-- **Selecionar** = `selecionar(posição)` 🔍 → Retorna o elemento na **posição informada**.  
-- **Selecionar Todos** = `selecionarTodos()` 📋 → Retorna **todos os elementos** da lista.  
-
-### **Atualizar elementos:**  
-- **Atualizar** = `atualizar(posição, novoDado)` 🔄 → Substitui um elemento existente.  
-
-### **Remover elementos:**  
-- **Apagar** = `apagar(posição)` ❌ → Remove um elemento de uma **posição específica**.  
+* **Está cheia:** `isFull()` ❌
+* **Está vazia:** `isEmpty()` ⚠️
+* **Imprimir:** `print()` 🖨️
 
 ---
 
-## **Operações Auxiliares** 🛠️  
-- **Está cheia?** = `estaCheia()` ❌  
-- **Está vazia?** = `estaVazia()` ⚠️  
-- **Imprimir** = `imprimir()` 🖨️  
+## 2. Filas
+
+**Aula: 24 📅**
+
+> A maioria dos conceitos gerais são os mesmos de pilha!
+
+### 🔧 Operações Principais
+
+* **Enfileirar:** `enqueue()` ⬆️
+* **Frente da fila:** `front()` 🔝
+* **Atualizar:** `update()` 🔄
+* **Desenfileirar:** `dequeue()` ⬇️
+
+### 🛠️ Operações Auxiliares
+
+* **Está cheia:** `isFull()` ❌
+* **Está vazia:** `isEmpty()` ⚠️
+* **Imprimir:** `print()` 🖨️
+
+### 🏗️ Tipos de Filas
+
+#### 2.1 Fila Simples (Queue) 🏃‍♂️➡️
+
+* **FIFO (First In, First Out)**
+* Elementos entram no final e saem pelo início.
+* **Exemplo:** Filas de atendimento, processamento de tarefas.
+
+#### 2.2 Fila Circular 🔄
+
+* Último elemento aponta para o primeiro (ciclo).
+* **Evita desperdício de espaço.**
+* **Exemplo:** Buffers de dados, sistemas de tempo real.
+
+#### 2.3 Fila Duplamente Terminada (Deque) ↔️
+
+* Permite inserção e remoção no início e no fim.
+* **Mais flexível.**
+* **Exemplo:** Histórico de navegação.
 
 ---
 
-## **Diferenças da Lista Circular para outras Listas** 🔍  
-✅ **Caminho contínuo**: O último elemento sempre aponta para o primeiro.  
-✅ **Eficiência**: Evita percorrer a lista inteira para achar o final.  
-✅ **Ideal para sistemas que precisam repetir ações** sem fim, como **buffers e rodízios de processos**.  
+## 3. Listas
+
+**Aula: 31 e 07 📅**
+
+### 🔁 O que é uma Lista Estática Circular?
+
+* Estrutura onde o **último aponta para o primeiro** formando um ciclo.
+* Usa **vetor fixo** com aritmética modular.
+* **Evita ponteiros nulos** e percorre a lista infinitamente.
+* **Usos:** Buffers, filas, gestão de memória.
+
+### 🔧 Operações Principais
+
+#### Adicionar elementos:
+
+* `anexar(dado)` ➕ – adiciona no final
+* `inserir(posição, dado)` 📌 – insere em posição específica
+
+#### Consultar elementos:
+
+* `selecionar(posição)` 🔍 – retorna elemento da posição
+* `selecionarTodos()` 📋 – retorna todos os elementos
+
+#### Atualizar elementos:
+
+* `atualizar(posição, novoDado)` 🔄 – substitui elemento existente
+
+#### Remover elementos:
+
+* `apagar(posição)` ❌ – remove elemento da posição
+
+### 🛠️ Operações Auxiliares
+
+* `estaCheia()` ❌
+* `estaVazia()` ⚠️
+* `imprimir()` 🖨️
+
+### 🔍 Diferenças das Listas Circulares
+
+* ✅ Caminho contínuo
+* ✅ Mais eficiência ao navegar
+* ✅ Ideal para ações repetitivas
+
+### ✨ Operações Extras
+
+#### Remover:
+
+* `apagarInicio()` 🚪 – remove o primeiro
+* `apagarFim()` 🔚 – remove o último
+
+#### Inserir:
+
+* `inserirInicio(dado)` 🔝 – adiciona no início
+* `inserirFim(dado)` ➡️ – mesmo que `anexar(dado)`
+
+#### Obter:
+
+* `obterInicio()` 🏁 – retorna o primeiro
+* `obterFim()` 🏁 – retorna o último
+
+#### Buscar:
+
+* `indiceDe(dado)` 🔍 – retorna a primeira posição do dado
+* `ultimoIndiceDe(dado)` 🔎 – retorna a última posição do dado
+* `contem(dado)` ✅ – verifica se está presente
+
+#### Outros:
+
+* `limpar()` 🗑️ – remove todos os elementos
+* `tamanho()` 📏 – retorna o número total de elementos
 
 ---
 
-## **Operações Extras** ✨  
+## 4. Métodos de Ordenação 🔢
 
-### **Remover elementos do início ou fim:**  
-- `apagarInicio()` 🚪 → Remove o **primeiro elemento**.  
-- `apagarFim()` 🔚 → Remove o **último elemento**.  
+**Aula: 14 📅**
 
-### **Inserir elementos no início ou fim:**  
-- `inserirInicio(dado)` 🔝 → Adiciona um elemento **no começo**.  
-- `inserirFim(dado)` ➡️ → Mesmo que `anexar(dado)`.  
+### 4.1 Bubble Sort 🫧
 
-### **Obter elementos do início ou fim:**  
-- `obterInicio()` 🏁 → Retorna o **primeiro elemento**.  
-- `obterFim()` 🏁 → Retorna o **último elemento**.  
+* Compara pares adjacentes e troca se estiverem fora de ordem.
+* Repete até não haver mais trocas.
 
-### **Busca e Índices:**  
-- `indiceDe(dado)` 🔍 → Retorna a **primeira posição** do elemento na lista.  
-- `ultimoIndiceDe(dado)` 🔎 → Retorna a **última posição** do elemento na lista.  
-- `contem(dado)` ✅ → Verifica se um elemento está presente.  
+```python
+def bubble_sort(lista):
+    n = len(lista)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if lista[j] > lista[j + 1]:
+                lista[j], lista[j + 1] = lista[j + 1], lista[j]
+```
 
-### **Outras operações:**  
-- `limpar()` 🗑️ → Remove **todos os elementos**.  
-- `tamanho()` 📏 → Retorna o **número total de elementos**.  
+---
+
+### 4.2 Selection Sort ✅
+
+* Encontra o menor elemento e coloca na posição correta.
+* Repete para todas as posições.
+
+```python
+def selection_sort(lista):
+    n = len(lista)
+    for i in range(n):
+        min_idx = i
+        for j in range(i + 1, n):
+            if lista[j] < lista[min_idx]:
+                min_idx = j
+        lista[i], lista[min_idx] = lista[min_idx], lista[i]
+```
+
+---
+
+### 4.3 Insertion Sort 📝
+
+* Insere cada elemento na posição correta da parte ordenada da lista.
+
+```python
+def insertion_sort(lista):
+    for i in range(1, len(lista)):
+        chave = lista[i]
+        j = i - 1
+        while j >= 0 and chave < lista[j]:
+            lista[j + 1] = lista[j]
+            j -= 1
+        lista[j + 1] = chave
+```
