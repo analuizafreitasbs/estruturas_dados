@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"Pilhas.Pilha_Dinamica.src","l":"Empilhavel"},{"p":"Pilhas.Pilha_Dinamica.src","l":"NoDuplo"},{"p":"Pilhas.Pilha_Dinamica.src","l":"PilhaDinamica"},{"p":"Pilhas.Pilha_Dinamica.src","l":"PilhaDinamicaMain"}];updateSearchResults();
