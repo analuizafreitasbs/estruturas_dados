@@ -52,7 +52,7 @@ public class FilaDinamica<T> implements Enfileiravel<T> {
      */
     @Override
     public void enfileirarInicio(T dado) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        throw new UnsupportedOperationException("Operação não suportada!");
     }
 
     /**
@@ -64,7 +64,7 @@ public class FilaDinamica<T> implements Enfileiravel<T> {
     @Override
     public void enfileirarFim(T dado) {
         if (estaCheia()) {
-            throw new UnsupportedOperationException("Not supported yet.");
+            throw new UnsupportedOperationException("Operação não suportada!");
         }
         NoDuplo<T> noTemp = new NoDuplo<>();
         noTemp.setDado(dado);
@@ -100,7 +100,7 @@ public class FilaDinamica<T> implements Enfileiravel<T> {
      */
     @Override
     public T tras() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        throw new UnsupportedOperationException("Operação não suportada!");
     }
 
     /**
@@ -159,7 +159,7 @@ public class FilaDinamica<T> implements Enfileiravel<T> {
      */
     @Override
     public String imprimirTrasPraFrente() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        throw new UnsupportedOperationException("Operação não suportada!");
     }
 
     /**
@@ -212,6 +212,6 @@ public class FilaDinamica<T> implements Enfileiravel<T> {
      */
     @Override
     public T desenfileirarFim() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        throw new UnsupportedOperationException("Operação não suportada!");
     }
 }

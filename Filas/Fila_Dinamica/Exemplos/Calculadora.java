@@ -1,4 +1,4 @@
-package Filas.Fila_Dinamica.testes;
+package Filas.Fila_Dinamica.Exemplos;
 
 public class Calculadora {
 

@@ -1,4 +1,4 @@
-package Filas.Fila_Dinamica.testes;
+package Filas.Fila_Dinamica.test;
 //Executar todos os comandos dentro da pasta "Fila Dinâmica Genérica"
 //compilar fonte: javac src/*.java -d bin
 
@@ -11,7 +11,7 @@ import Filas.Fila_Dinamica.src.FilaDinamica;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class FilaDInamicaTeste {
+public class FilaDinamicaTeste {
   @Test
   public void testFilaComDiferentesTipos() {
     Enfileiravel<Integer> filaInt = new FilaDinamica<>(2);
