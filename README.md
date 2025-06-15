@@ -257,7 +257,11 @@
 
 #### Sintaxe básica:
 /**
+
 ** Descrição do método.
+
 ** @param parametro Descrição do parâmetro.
+
 ** @return Descrição do valor retornado.
+
   */
