@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"Filas.Fila_Dinamica.src","l":"Enfileiravel"},{"p":"Filas.Fila_Dinamica.src","l":"FilaDinamica"},{"p":"Filas.Fila_Dinamica.src","l":"FilaDinamicaMain"},{"p":"Filas.Fila_Dinamica.src","l":"NoDuplo"}];updateSearchResults();

@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"Pilhas.Pilha_Dinamica.src"}];updateSearchResults();
