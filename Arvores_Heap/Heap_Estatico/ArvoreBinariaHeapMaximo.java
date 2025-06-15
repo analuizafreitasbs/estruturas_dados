@@ -11,7 +11,7 @@ import java.util.NoSuchElementException;
  * @version 1.0
  * @since 2025-06-04
  */
-public class ArvoreBinariaHeapMaximo<T> implements Amontoavel<T> {
+public abstract class ArvoreBinariaHeapMaximo<T> implements Amontoavel<T> {
     /** Array que armazena os elementos do heap */
     private T[] dados;
 
@@ -42,11 +42,14 @@ public class ArvoreBinariaHeapMaximo<T> implements Amontoavel<T> {
         }
         return dados[0];
     }
-
     @Override
     public void inserir(T dado) {
         if (estaCheia()) {
-            throw new OverflowException("Heap Cheia!");
+            try {
+                throw new Exception ("Heap Cheia!");
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
         }
         ponteiroFim++;
         dados[ponteiroFim] = dado;
@@ -93,9 +96,9 @@ public class ArvoreBinariaHeapMaximo<T> implements Amontoavel<T> {
     }
 
     @Override
-    public T extrair() {
+    public T extrair() throws Exception {
         if (estaVazia()) {
-            throw new UnderflowException("Heap Vazia!");
+            throw new Exception( "Heap Vazia!");
         }
         T dadoRaiz = dados[0];
         dados[0] = dados[ponteiroFim];

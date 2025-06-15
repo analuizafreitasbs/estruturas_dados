@@ -1,6 +1,6 @@
 # 📚 Estrutura de Dados 2025.1
 
-**Aluna:** Ana Luiza Freitas B Siqueira 👩‍🎓
+**Aluna:** Ana Luiza Freitas B Siqueira 👩‍🎓  
 **Anotações de Aula e Afins**
 
 ---
@@ -55,6 +55,12 @@
 * **Está vazia:** `isEmpty()` ⚠️
 * **Imprimir:** `print()` 🖨️
 
+### 🆕 Pilhas Dinâmicas
+
+* Pilhas implementadas com **listas encadeadas** — não tem tamanho fixo.
+* Operações `push` e `pop` manipulam ponteiros.
+* Vantagem: crescimento dinâmico, não precisa de tamanho máximo.
+
 ---
 
 ## 2. Filas
@@ -96,11 +102,16 @@
 * **Mais flexível.**
 * **Exemplo:** Histórico de navegação.
 
+### 🆕 Filas Dinâmicas
+
+* Implementadas com listas encadeadas para permitir tamanho variável.
+* Evitam o problema de filas estáticas com espaço fixo.
+
 ---
 
 ## 3. Listas
 
-**Aula: 31 e 07 📅**
+**Aulas: 31 e 07 📅**
 
 ### 🔁 O que é uma Lista Estática Circular?
 
@@ -169,57 +180,85 @@
 * `limpar()` 🗑️ – remove todos os elementos
 * `tamanho()` 📏 – retorna o número total de elementos
 
+### 🆕 Listas Dinâmicas
+
+* Implementadas com nós que apontam para o próximo (e anterior no caso de listas duplamente encadeadas).
+* Permitem inserção e remoção em qualquer posição sem realocar elementos (como vetor).
+
 ---
 
-## 4. Métodos de Ordenação 🔢
+## 4. Árvores Binárias Heap
+
+### O que é Heap?
+
+* Estrutura árvore binária completa que satisfaz a propriedade de heap:
+    - **Max-heap:** o valor do nó pai é maior ou igual aos valores dos filhos.
+    - **Min-heap:** o valor do nó pai é menor ou igual aos valores dos filhos.
+
+### Aplicações
+
+* Implementação eficiente de **filas de prioridade**.
+* Base para o algoritmo **Heapsort**.
+
+### Operações Principais
+
+* **Inserção:** adiciona um elemento e corrige a posição para manter heap.
+* **Remoção (extração):** remove a raiz (máximo ou mínimo) e reorganiza.
+
+---
+
+## 5. Métodos de Ordenação 🔢
 
 **Aula: 14 📅**
 
-### 4.1 Bubble Sort 🫧
+### 5.1 Dividir para Conquistar
 
-* Compara pares adjacentes e troca se estiverem fora de ordem.
-* Repete até não haver mais trocas.
+#### 5.1.1 Heapsort
 
-```python
-def bubble_sort(lista):
-    n = len(lista)
-    for i in range(n):
-        for j in range(0, n - i - 1):
-            if lista[j] > lista[j + 1]:
-                lista[j], lista[j + 1] = lista[j + 1], lista[j]
-```
+* Usa um heap para ordenar.
+* Constrói um max-heap e extrai o maior elemento repetidamente.
 
----
+#### 5.1.2 Quicksort
 
-### 4.2 Selection Sort ✅
+* Escolhe um pivô, particiona o array em dois grupos.
+* Recursivamente ordena as partes menores e maiores.
 
-* Encontra o menor elemento e coloca na posição correta.
-* Repete para todas as posições.
+#### 5.1.3 Mergesort
 
-```python
-def selection_sort(lista):
-    n = len(lista)
-    for i in range(n):
-        min_idx = i
-        for j in range(i + 1, n):
-            if lista[j] < lista[min_idx]:
-                min_idx = j
-        lista[i], lista[min_idx] = lista[min_idx], lista[i]
-```
+* Divide a lista em duas metades.
+* Ordena cada metade e depois mescla ordenadamente.
 
 ---
+## 6. Assuntos Complementares
 
-### 4.3 Insertion Sort 📝
+#### 6.1 Teste de Software
+* Testes unitários: verificam o funcionamento isolado de métodos e classes.
 
-* Insere cada elemento na posição correta da parte ordenada da lista.
+* Usam frameworks como JUnit no Java.
 
-```python
-def insertion_sort(lista):
-    for i in range(1, len(lista)):
-        chave = lista[i]
-        j = i - 1
-        while j >= 0 and chave < lista[j]:
-            lista[j + 1] = lista[j]
-            j -= 1
-        lista[j + 1] = chave
-```
+* Exemplo: testar se push() realmente adiciona um elemento à pilha.
+
+#### 6.2 Generics
++ Permitem criar classes e métodos parametrizados por tipo.
+
+* Exemplo: class Pilha<T> { ... } aceita qualquer tipo T.
+
+* Evita código duplicado para diferentes tipos.
+
+#### 6.3 Exceções
+* Tratamento de erros em tempo de execução.
+
+* Blocos try { ... } catch (Exception e) { ... } finally { ... }
+
+* Criar exceções personalizadas para casos específicos (ex: PilhaVaziaException).
+
+#### 6.4 JavaDoc
+- Documentação padronizada em comentários.
+
+- Sintaxe básica:
+
+/**
+* Descrição do método.
+* @param parametro Descrição do parâmetro.
+* @return Descrição do valor retornado.
+  */
