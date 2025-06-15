@@ -256,7 +256,6 @@
 - Documentação padronizada em comentários.
 
 #### Sintaxe básica:
----
 /**
 ** Descrição do método.
 ** @param parametro Descrição do parâmetro.
