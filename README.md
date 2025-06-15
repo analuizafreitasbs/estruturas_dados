@@ -255,10 +255,16 @@
 #### 6.4 JavaDoc
 - Documentação padronizada em comentários.
 
-- Sintaxe básica:
+#### Sintaxe básica:
+---
 
-/**
-* Descrição do método.
-* @param parametro Descrição do parâmetro.
-* @return Descrição do valor retornado.
-  */
+[//]: # (/**)
+
+[//]: # (* Descrição do método.)
+
+[//]: # (* @param parametro Descrição do parâmetro.)
+
+[//]: # (* @return Descrição do valor retornado.)
+
+[//]: # (  */)
+---
