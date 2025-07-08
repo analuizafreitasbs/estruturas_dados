@@ -1,0 +1,16 @@
+// Árvores
+
+// Serve para organizar dados de forma hierárquica, onde cada elemento é um nó e pode ter filhos.
+- As arvores são muito usadas em estruturas de dados, como sistemas de arquivos, bancos de dados e algoritmos de busca.
+- Sevindo proicipalmente para armazenar dados de forma que seja fácil de navegar e manipular.
+- Inserindo, removendo e buscando elementos de forma eficiente.
+- Não são lineares, ou seja, não seguem uma sequência linear como listas ou arrays.
+- Nó pai: é o nó que está acima de outro nó.
+- Nó filho: é o nó que está abaixo de outro nó.
+- Nó raiz: é o nó que não tem pai, ou seja, é o topo da árvore.
+- Folha: é um nó que não tem filhos, ou seja, é o final de um ramo da árvore.
+// - Sub árvore: é uma parte da árvore que contém um nó e todos os seus descendentes.
+
+//  A diferença para arvore binária é que cada nó pode ter mais de dois filhos,
+ enquanto na árvore binária cada nó tem no máximo dois filhos (esquerdo e direito).
+
