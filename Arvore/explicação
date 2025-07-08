@@ -14,3 +14,80 @@
 //  A diferença para arvore binária é que cada nó pode ter mais de dois filhos,
  enquanto na árvore binária cada nó tem no máximo dois filhos (esquerdo e direito).
 
+// Arvores binarias de busca (BST - Binary Search Tree):
+- onde todos os nós à esquerda de um nó são menores que ele e todos os nós à direita são maiores.
+- esquerda menor que o nó pai e direita maior que o nó pai.
+
+Inserção: percorre a árvore até encontrar a posição correta.
+
+Busca: começa na raiz e segue à esquerda ou direita dependendo do valor.
+
+Remoção: três casos:
+
+Nó sem filhos → remove direto.
+
+Nó com 1 filho → liga o filho ao pai do nó removido.
+
+Nó com 2 filhos → substitui pelo sucessor (menor da subárvore direita) ou antecessor (maior da subárvore esquerda).
+
+       8
+     /   \
+    3     10
+   / \      \
+  1   6      14
+     / \
+    4   7
+
+20, 15, 25, 10, 18, 22, 3
+
+     20
+    /   \
+    15    25
+    / \    /
+    10  18  22
+    /
+    3
+
+- Arvores AVL: são árvores binárias de busca balanceadas,
+onde a diferença de altura entre as subárvores esquerda e direita de qualquer nó é no máximo 1.
+
+- arvore binaria de bsuca balanceada, onde a diferença de altura entre as subárvores
+esquerda e direita de qualquer nó é no máximo 1.
+
+- quando ela fica desbalanceada, ela é rotacionada para manter o balanceamento.
+
+LL (Simples à direita): Inserção à esquerda do filho esquerdo.
+
+RR (Simples à esquerda): Inserção à direita do filho direito.
+
+LR (Dupla à direita): Inserção à direita do filho esquerdo.
+
+RL (Dupla à esquerda): Inserção à esquerda do filho direit
+
+// Complexidade AVL
+   Altura sempre O(log n)
+
+   Operações de busca, inserção, remoção: O(log n)
+
+// Arvores Red-Black:
+- são árvores binárias de busca balanceadas, onde cada nó tem uma cor (vermelho ou preto).
+- As regras são:
+  1. A raiz é preta.
+  2. Folhas (Nulos) são pretas.
+  3. Se um nó é vermelho, seus filhos devem ser pretos.
+  4. Todo caminho da raiz até as folhas tem o mesmo número de nós pretos.
+  5. Oum nó é vermelho ou preto, mas não ambos.
+
+- tem altura O(log n) e operações de busca, inserção e remoção também são O(log n).
+
+⚠️ Problema:
+Se os dados forem inseridos em ordem (tipo 1, 2, 3, 4...), a árvore vira isso:
+
+1
+ \
+  2
+   \
+    3
+     \
+      4
+👉 Isso vira uma lista ligada, e perde eficiência. Por isso existem árvores balanceadas como AVL e Rubro-Negra.
