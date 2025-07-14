@@ -1,10 +1,23 @@
-package Arvore.ABP;
+package Arvore.AVLgenerica.src.main.java;
 
 public class NoTriplo<T> {
     private T dado;
     private NoTriplo<T> genitor;
     private NoTriplo<T> esquerda;
     private NoTriplo<T> direita;
+    private int altura;
+
+    public NoTriplo() {
+        altura = 0;
+    }
+
+    public int getAltura() {
+        return altura;
+    }
+
+    public void setAltura(int altura) {
+        this.altura = altura;
+    }
 
     public T getDado() {
         return dado;
@@ -22,11 +35,11 @@ public class NoTriplo<T> {
         this.genitor = genitor;
     }
 
-    public NoTriplo<T> getEsquerda() {
+    public NoTriplo<T>  getEsquerda() {
         return esquerda;
     }
 
-    public void setEsquerda(NoTriplo<T> filhoEsquerda) {
+    public void setEsquerda(NoTriplo<T> esquerda) {
         this.esquerda = esquerda;
     }
 
@@ -34,7 +47,7 @@ public class NoTriplo<T> {
         return direita;
     }
 
-    public void setDireita(NoTriplo<T> filhoDireito) {
+    public void setDireita(NoTriplo<T> direita) {
         this.direita = direita;
     }
 }

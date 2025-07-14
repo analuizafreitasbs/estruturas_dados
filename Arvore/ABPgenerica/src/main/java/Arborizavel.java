@@ -1,4 +1,4 @@
-package Arvore.ABP;
+package Arvore.ABPgenerica;
 
 public interface Arborizavel<T> {
 

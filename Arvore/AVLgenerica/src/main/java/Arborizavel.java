@@ -1,4 +1,4 @@
-package Arvore.AVL;
+package Arvore.AVLgenerica.src.main.java;
 
 public interface Arborizavel<T> {
 

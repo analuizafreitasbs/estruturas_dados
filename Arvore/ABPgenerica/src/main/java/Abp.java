@@ -1,4 +1,4 @@
-package Arvore.ABP;
+package Arvore.ABPgenerica;
 
 /**
  * Implementação de uma Árvore Binária de Pesquisa (ABP).

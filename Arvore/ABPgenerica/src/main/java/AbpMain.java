@@ -1,4 +1,4 @@
-package Arvore.ABP;
+package Arvore.ABPgenerica;
 
 import java.util.Scanner;
 
