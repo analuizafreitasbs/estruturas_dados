@@ -1,4 +1,4 @@
-package Arvore;
+package Arvore.ABP;
 
 public class NoTriplo<T> {
     private T dado;
