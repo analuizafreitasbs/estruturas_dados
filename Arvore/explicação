@@ -1,5 +1,14 @@
 // Árvores
 
+| Característica             | ABP (BST)                       | AVL                           |
+| -------------------------- | ------------------------------- | ----------------------------- |
+| Estrutura                  | Árvore binária de busca simples | Árvore binária **balanceada** |
+| Balanceamento              | Não automático                  | Automático após cada operação |
+| Complexidade (pior caso)   | O(n)                            | O(log n)                      |
+| Rotações                   | Não tem                         | Sim (para balancear)          |
+| Mais fácil de implementar  | ✅ Sim                           | ❌ Mais difícil                |
+| Mais eficiente para buscas | ❌ Não                           | ✅ Sim                         |
+
 // Serve para organizar dados de forma hierárquica, onde cada elemento é um nó e pode ter filhos.
 - As arvores são muito usadas em estruturas de dados, como sistemas de arquivos, bancos de dados e algoritmos de busca.
 - Sevindo proicipalmente para armazenar dados de forma que seja fácil de navegar e manipular.
@@ -22,7 +31,7 @@ Inserção: percorre a árvore até encontrar a posição correta.
 
 Busca: começa na raiz e segue à esquerda ou direita dependendo do valor.
 
-Remoção: três casos:
+* Remoção: três casos:
 
 Nó sem filhos → remove direto.
 
@@ -49,10 +58,12 @@ Nó com 2 filhos → substitui pelo sucessor (menor da subárvore direita) ou an
     3
 
 - Arvores AVL: são árvores binárias de busca balanceadas,
-onde a diferença de altura entre as subárvores esquerda e direita de qualquer nó é no máximo 1.
+onde a diferença de altura entre as sub árvores esquerda e direita de qualquer nó é no máximo 1.
 
-- arvore binaria de bsuca balanceada, onde a diferença de altura entre as subárvores
+- arvore binaria de busca balanceada, onde a diferença de altura entre as subárvores
 esquerda e direita de qualquer nó é no máximo 1.
+
+- Cada nó tem um fator de balanceamento = altura da subárvore esquerda − altura da subárvore direita.
 
 - quando ela fica desbalanceada, ela é rotacionada para manter o balanceamento.
 
