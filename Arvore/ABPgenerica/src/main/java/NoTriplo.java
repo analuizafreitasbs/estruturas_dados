@@ -1,4 +1,4 @@
-package Arvore.ABPgenerica;
+package Arvore.ABPgenerica.src.main.java;
 
 public class NoTriplo<T> {
     private T dado;
