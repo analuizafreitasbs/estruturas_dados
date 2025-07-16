@@ -6,7 +6,7 @@ public class AbpEu<T extends Comparable<T>> implements Arborizavel<T> {
     // A raiz da árvore. É o primeiro nó, onde tudo começa.
 
     public AbpEu() {
-        // Construtor: cria uma árvore vazia, sem nenhuma raiz.
+        // Construtor: cria uma árvore vazia, sem nenhuma raiz...
         raiz = null;
     }
 
@@ -71,6 +71,7 @@ public class AbpEu<T extends Comparable<T>> implements Arborizavel<T> {
     }
 
     private void apagarComDoisFIlhos(NoTriplo<T> aux) {
+        
     }
 
     private void apagarComUmFilho(NoTriplo<T> aux) {
@@ -78,6 +79,7 @@ public class AbpEu<T extends Comparable<T>> implements Arborizavel<T> {
     }
 
     private void apagarNoFolha(NoTriplo<T> aux) {
+        NoTriplo<T> nodo;
         NoTriplo<T> pai = nodo.getGenitor();
         if (pai == null) {
             raiz = null;
