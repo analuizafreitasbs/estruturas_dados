@@ -102,3 +102,26 @@ Se os dados forem inseridos em ordem (tipo 1, 2, 3, 4...), a árvore vira isso:
      \
       4
 👉 Isso vira uma lista ligada, e perde eficiência. Por isso existem árvores balanceadas como AVL e Rubro-Negra.
+
+Anterior:
+                   [P]
+             /               \
+      [C, K]                  [S, W]
+    /       |         \         /      |     \
+[A,B]   [D,E,F,H]  [L,N,Q,R] [T,V]  [X,Y]   [Z]
+
+Nova:
+               [P]
+        /               \
+    [C, K]               [S, W]
+  /    |    \          /     |     \
+[A,B,D,E] [F,H]  [L,N]  [Q,R] [T,V] [X,Y,Z]
+
+
+                      [P]
+               /              \
+            [C, K]              [S, W]
+         /    |     \             /      \     \
+    [A, B] [D, E, F, H] [L, N]  [Q, R] [T, V] [X, Y, Z]
+
+
