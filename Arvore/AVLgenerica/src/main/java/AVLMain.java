@@ -1,16 +1,12 @@
-package Arvore.ABPgenerica.src.main.java;
+package Arvore.AVLgenerica.src.main.java;
 
 import java.util.Scanner;
 
-public class AbpMain {
-    /**
-     * Método principal. Executa o menu de operações da árvore.
-     * @param args Argumentos da linha de comando (não utilizados).
-     */
+public class AVLMain {
     public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
         int opcao, valor;
-        Arborizavel<Integer> arvore = new Abp<>();
+        Arborizavel<Integer> arvore = new AVL<>();
         do {
             exibirMenu();
             opcao = scanner.nextInt();
@@ -67,11 +63,8 @@ public class AbpMain {
         scanner.close();
     }
 
-    /**
-     * Exibe o menu principal de opções.
-     */
     private static void exibirMenu() {
-        System.out.println("=== Arvore Binaria de Pesquisa ===");
+        System.out.println("=== Arvore Binaria AVL ===");
         System.out.println("0. SAIR");
         System.out.println("1. Inserir");
         System.out.println("2. Apagar");
@@ -81,9 +74,6 @@ public class AbpMain {
         System.out.print("Escolha uma opcao (0-5): ");
     }
 
-    /**
-     * Exibe o menu de opções de impressão.
-     */
     private static void exibirMenuImprimir() {
         System.out.println("1. Imprimir Pre-Ordem");
         System.out.println("2. Imprimir Em-Ordem");

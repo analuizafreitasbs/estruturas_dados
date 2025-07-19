@@ -118,10 +118,4 @@ Nova:
 [A,B,D,E] [F,H]  [L,N]  [Q,R] [T,V] [X,Y,Z]
 
 
-                      [P]
-               /              \
-            [C, K]              [S, W]
-         /    |     \             /      \     \
-    [A, B] [D, E, F, H] [L, N]  [Q, R] [T, V] [X, Y, Z]
-
 
